@@ -1,5 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
+<%= form_with url: import_users_path, method: :post do |form| %>
+  <%= form.file_field :file, accept: ".csv" %>
+  <%= form.button "Import" %>
+<% end %>
+
 <h1>
   Users:
   <%= @users.count %>
