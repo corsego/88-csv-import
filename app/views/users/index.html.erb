@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>
+  Users:
+  <%= @users.count %>
+</h1>
+
+<div id="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+  <% end %>
+</div>
